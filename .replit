@@ -1,0 +1,2 @@
+run = "pip install flask && python main.py"
+language = "python3"
