@@ -1,3 +1,8 @@
+import subprocess
+import sys
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "flask", "-q"])
+
 from flask import Flask, Response
 from datetime import datetime
 
@@ -36,5 +41,4 @@ def mpy(y1, y2):
     except ValueError:
         return Response("Invalid numbers", status=400, mimetype='text/plain')
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+app.run(host='0.0.0.0', port=5000)
